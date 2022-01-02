@@ -1,0 +1,529 @@
+ <!-- YOU CAN EDIT THIS AS YOU PLEASE, BUT PLEASE DO NOT REMOVE THE CREDIT IMAGE. YOU CAN CHANGE IT TO MATCH YOUR AESTHETIC BUT PLEASE DO NOT REMOVE THE CREDIT. -->
+
+
+ <!-- dont remove this right here please lol its important  --> 
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+ <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+
+            <!-- DESCRIPTION -->
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description} 
+ 
+ 
+            <!-- DEFAULT COLORS -->
+    <meta name="color:bg" content="#E5F5F8">
+    <meta name="color:border" content="#05174F">
+    <meta name="color:infobg" content="#F9F9F9">
+    <meta name="color:sideborder" content="#05174F">
+    <meta name="color:container" content="#6DB7EC" />
+    
+    <meta name="color:links" content="#A3EACE">
+    <meta name="color:links hover" content="#5BA98A">
+    <meta name="color:sidelinks" content="#E3BA3A">
+    <meta name="color:sidehover" content="#F09D33">
+
+    <meta name="color:scrollbar" content="#C1ECE4">
+    <meta name="color:scrollbar bg" content="#A29CF9">
+    <meta name="color:title" content="#0F2667">
+    <meta name="color:text" content="#0F2667">
+    <meta name="color:tags" content="#354DBB">
+    
+    
+     
+
+            <!-- TEXT CUSTOMIZATIONS -->
+    <meta name="text:title" content=""/>
+    <meta name="text:link one" content="">
+    <meta name="text:link one url" content="/">
+    <meta name="text:link two" content="">
+    <meta name="text:link two url" content="/">
+    <meta name="text:link three" content="">
+    <meta name="text:link three url" content="/">
+ 
+             <!-- IMAGE CUSTOMIZATIONS -->
+     <meta name="image:sidebar" content="https://i.pinimg.com/474x/fc/c4/ce/fcc4ce97b7ad5d889c7a56ae703332c8.jpg"/>
+    <meta name="image:side img" content="https://66.media.tumblr.com/50b7ae29762f00455d47050aa0c79c50/a7d8abf1c6d08607-ca/s400x600/12a3a4be63488c48e37538eb4ca99a09cc9a827f.png"/>
+ 
+                   <!-- THEME START (forreal) -->
+ <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+<style type="text/css">
+    
+         /* SCROLLBAR CODE. */
+         /* TO CHANGE THE WIDTH, EDIT THE LAST PX (BEFORE !important */
+::-webkit-scrollbar {background-color:{color:scrollbar bg}; height:8px; width:5px}
+::-webkit-scrollbar-thumb:vertical {background-color:{color:scrollbar}; height:50px}
+::-webkit-scrollbar-thumb:horizontal {background-color:{color:scrollbar}; height:10px!important}
+
+
+            /* FONT CODES, ADD WHAT YOU WANT */ 
+@font-face { font-family: 'comic neue', cursive; }
+ 
+
+            /* ENTIRE THEME */
+body {
+    background:{color:bg};
+    color:{color:text};
+    font-family:comic neue;
+    font-size:10px; }
+
+            /* LINKS, LINKS WHEN YOU HOVER */
+a {      
+    color:{color:links}; 
+    text-decoration:underline }
+a:hover {
+    opacity:1; /* 0 WOULD BE TRANSPARENT; 1 IS OPAQUE */
+    font-family: times;
+    color:{color:links hover};
+        letter-style:bold }
+ 
+ img {
+    border:none; }
+
+ 
+h1 {
+    font-weight:normal;
+    font-size:13px;
+    text-align:center;
+    font-style:normal;
+    line-height:80%;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:{color:text}; }
+ 
+blockquote {
+    border-left:1px solid {color:text};
+    padding-left:5px;
+    margin:5px; }
+   
+#theme {
+    background-color:{color:bg};
+    width:700px;
+    margin: 0 auto -12px auto;
+    text-align: center;
+    }
+
+
+h2 {
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    letter-spacing:-0.5px;
+    color:{color:text};
+    font-weight:normal;
+    padding:5px;
+    padding-bottom:2px; }
+    
+    
+        /* SIDEBAR */
+#sidebar {
+    color:{color:text};
+    position:fixed; /* DONT TOUCH */
+    width:150px;
+    height:auto; /* DONT TOUCH */
+    margin-top:200px;
+    margin-left:-150px;
+    padding-top:10px;
+    text-align:center; }
+#sidebar img {
+    width:150px;
+    height:200px;
+    margin-left:130px;
+    margin-top:-180px;
+    padding:3px;
+    border: 2px solid {color:sideborder}; /* CAN EDIT IT TO BE DASHED OR DOTTED */
+    position:fixed; }
+    
+        /* SIDEBAR LINKS */
+.links {
+    position:fixed; /* DONT TOUCH */
+    margin-top:0px;
+    margin-left:38px;
+    width:175px;
+    padding: 8px;
+    word-spacing:4px;
+    text-align:center;
+    text-transform:uppercase;
+    color:{color:links}; }
+.links a {
+    font-size: 10px;
+    color:{color:links}; }
+.links a:hover {
+   color:{color:links hover};
+   letter-spacing:1px; }  
+    
+    
+        /* DESCRIPTION */
+.description {
+    padding-top:40px;
+    margin-top:220px;
+    margin-left:60px;
+    text-align:justify;
+    font-size:9px;
+    width:150px;
+    color:{color:text};
+    letter-spacing:1px;
+    line-height:120%; }
+.description a {
+    color:{color:sidelinks}; }
+.description a:hover {
+   color:{color:sidehover};
+   letter-spacing:1px; }  
+    
+    
+        /* PAGE NAVIGATION */
+.pagination {
+    width:180px;
+    height:20px;
+    text-transform:lowercase;
+    letter-spacing:0px;
+    text-align:right;
+    margin-left:30px;
+    margin-top:0px;
+    font-family:new york;
+    font-size:10px;
+    padding-top:5px;
+    padding-bottom:3px;
+    opacity:1;
+    position:fixed;
+        -moz-transition-duration:0.7s;
+        -webkit-transition-duration:0.7s;
+        -o-transition-duration:0.7s; }
+.pagination a {
+    color:{color:text}; }
+.pagination a:hover {
+    color:{color:link}; }
+    
+    
+        /* POST ENTRIES */
+#entries {
+    float:left;
+    margin-left:150px;
+    margin-top:40px;
+    text-align:justify;
+    color:{color:text};
+    margin-bottom: 30px; }
+    
+    
+        /* EDIT POSTS HERE */
+#posts {
+    width:500px;
+    margin-top:75px;
+    text-align:justify;
+    font-size:11px;
+    line-height:100%;
+    letter-spacing:0x;
+    color:{color:text};
+    background-color:{color:container};
+    border: 1px solid {color:border};
+    padding:10px; }
+.caption {
+    width:500px;
+    text-align:justify;
+    line-height:120%; }
+    
+    
+        /* ASK POSTS */
+#ask {
+    background-color:{color:infobg};
+    text-align:justify;
+    line-height:160%;
+    color:{color:text};
+    padding:5px;
+    padding-bottom:10px;
+    padding-top:3px; }
+#asker img {
+    margin-left:-2px;
+    margin-bottom:-15px;
+    padding:3px;
+    padding-bottom:5px; }
+#ans {
+    text-align:left;
+    padding:0px;
+    color:{color:text}; }
+    
+    
+        /* AUDIO POSTS */
+.playerbuttonbg {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 19px;
+    height: 19px;
+    background-color: #ffffff;
+    padding: 10px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+    border-radius: 40px;
+    opacity: .4;
+        filter: alpha(opacity=40);
+    opacity: 0.4;
+        -khtml-opacity: 0.4;
+    transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -webkit-transition: opacity .5s ease-in-out; }
+.playerbuttonbg:hover {
+    opacity: 1;
+        filter: alpha(opacity=100);
+        -moz-opacity: 1;
+        -khtml-opacity: 1; }
+.newplayerbutton {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    overflow: hidden; }
+.playerbuttonhug {
+    position: absolute;
+    top: -18px;
+    left: -7px; }
+       
+.tumblr_audio_player {
+    height: 90px;
+    width: 270px;
+        -moz-transform: scale(0.60, 0.60);
+        -webkit-transform: scale(0.60, 0.60);
+        -o-transform: scale(0.60, 0.60);
+        -ms-transform: scale(0.60, 0.60);
+    transform: scale(0.60, 0.60);
+        -moz-transform-origin: top left;
+        -webkit-transform-origin: top left;
+        -o-transform-origin: top left;
+        -ms-transform-origin: top left;
+    transform-origin: top left; }
+
+.audioimgwrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 79px;
+    height: 79px;   }
+           
+.audioimgwrapper img {
+    width: 100%;
+    height: auto;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+    border-radius: 40px; }
+           
+.trackdetails {
+    width: auto;
+    display:inline-block;
+    margin-left: 90px;
+    min-height: 85px; }
+
+.audiowrapper {
+    position: relative;
+    display:inline-block; }
+    
+    
+        /* POST INFO */
+#postinfo {
+    padding:2px;
+    margin-top:12px;
+    font-size:10px;
+    color:{color:link};
+    text-transform:lowercase;
+    font-style:italic;
+    letter-spacing:1px;
+    text-align:left;
+    border-top:1px solid {color:border};
+        -moz-transition-duration:0.5s;
+        -webkit-transition-duration:0.5s;
+        -o-transition-duration:0.5s; }
+#postinfo a {
+    color:{color:link};
+    font-style:italic;
+    letter-spacing:1px; }
+#postinfo a:hover {
+    color:{color:hover}; }
+   
+    
+        /* POST TAGS */
+.tags {
+    font-style:normal;
+    width:500px;
+    text-transform:uppercase;
+    font-style:normal;
+    color:{color:tags};
+    line-height:120%;
+    font-size:8px;
+    text-align:left;
+    padding:2px;
+        -moz-transition-duration:0.5s;
+        -webkit-transition-duration:0.5s;
+        -o-transition-duration:0.5s; }
+.tags a {
+    color:{color:tags};
+    letter-spacing:0px;
+    padding:1px; }
+.tags a:hover {
+    color:{color:link}; }
+    
+    
+    
+        /* CHAT POSTS */
+ul.chat, .chat ol, .chat li {
+    list-style:none;
+    margin:0px;
+    padding:3px; }
+.label {
+    text-decoration:none;
+    font-weight:700;
+    margin-right:5px; }
+    
+
+        /* CREDIT TO COATIMUNDI */    
+#credit{
+    font-size: 14px; 
+    font-style:none; 
+    letter-spacing: 0px; 
+    float: fixed; 
+    position: left; 
+    bottom: 10px; 
+    right: 10px; 
+    text-transform:none; 
+    font-family:masexy; }
+#credit a{
+    color: #fff;
+    padding:5px;
+        -moz-transition-duration:0.5s;
+        -webkit-transition-duration:0.5s;
+        -o-transition-duration:0.5s;
+    }
+#credit a:hover{
+    color: {color:border};
+    background:{color:bg};
+    font-family:masexy;
+        -moz-transition-duration:0.5s;
+        -webkit-transition-duration:0.5s;
+        -o-transition-duration:0.5s; }
+    
+    {CustomCSS}
+ 
+</style></head>
+ 
+<body>
+
+<div id="theme">
+
+<div id="sidebar">
+<div id="sidebar"><img src="{image:sidebar}"> </div>
+    
+<div class="links">
+    <a href="/">home</a> 
+    <a href="/ask">ask</a> 
+        {block:IfLinkA}
+        <a href="{text:linkA url}">{text:linkA}</a> 
+        {/block:IfLinkA}
+        {block:IfLinkB}
+        <a href="{text:linkB url}">{text:linkB}</a> 
+        {/block:IfLinkB}
+        {block:IfLinkC}
+        <a href="{text:linkC url}">{text:linkC}</a>
+        {/block:IfLinkC} 
+    </div>
+    
+<div class="description">
+    {Description}
+    </div>
+
+{block:Pagination}
+    <div class="pagination">
+    {block:PreviousPage}
+    <a href="{PreviousPage}">prev</a> 
+    {/block:PreviousPage}
+    {block:NextPage} -
+    <a href="{NextPage}">forth</a>
+    {/block:NextPage}
+    </div>
+{/block:Pagination}
+
+</div>
+ 
+<div id="entries">
+ 
+{block:Posts}
+<div id="posts">
+    {block:Text}{block:Title}<h2>{Title}</h2>{/block:Title}{Body}{/block:Text}
+ 
+    {block:Quote}<h2>“{Quote}”</h2><h1>{Source}</h1>{/block:Quote}
+ 
+    {block:Link}<a href="{URL}"><h2>{Name}</h2></a>
+        {block:Description}<p>{Description}</p>{/block:Description}{/block:Link}
+ 
+    {block:Photo}<center><img src="{PhotoURL-500}"/></center>{block:Caption}{Caption}{/block:Caption}{/block:Photo}
+ 
+    {block:Photoset}<center>{Photoset-500}</center>
+        {block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+ 
+    {block:Chat}<ul class="chat">{block:Title}<h2>{Title}</h2>{/block:Title}{block:Lines}<li>{block:Label}<span class="label">{Label}</span>{/block:Label}&nbsp;{Line}</li>{/block:Lines}</ul>{/block:Chat}
+ 
+    {block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+ 
+    {block:Answer}<div id="ask"><div id="asker"><img src="{AskerPortraitURL-24}"> {Asker}asked: {Question}</div></div><div id="ans">{Answer}</div>{/block:answer}
+ 
+    {block:Audio}{block:AudioPlayer}
+            <div class="audiowrapper">
+            {block:AlbumArt}
+                <div class="audioimgwrapper"><img src="{AlbumArtURL}"></div>
+            {/block:AlbumArt}
+           
+            <div class="playerbuttonbg">
+                <div class="newplayerbutton">
+                    <div class="playerbuttonhug">
+                        {AudioPlayerWhite}
+                    </div>
+                </div>
+            </div>
+       
+        <div class="trackdetails">
+                {block:TrackName}{TrackName}{/block:TrackName}<br/>
+                {block:Artist}Artist: {Artist}{/block:Artist}<br/>
+                {block:Album}Album: {Album}{/block:Album}<br/>
+                {PlayCountWithLabel}
+        </div>
+        </div>
+        {/block:AudioPlayer}
+   
+            {block:Caption}{Caption}{/block:Caption}{/block:Audio}
+ 
+ 
+{block:Date} <div id="postinfo"><a href="{Permalink}">{TimeAgo}</a> {block:NoteCount} with <a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount} {block:RebloggedFrom} via <a href="{ReblogParentURL}">{ReblogParentName}</a>
+{/block:RebloggedFrom} {block:ContentSource}  from <a href="{SourceURL}">{SourceTitle}</a>{/block:ContentSource}</div>{/block:Date}
+{block:HasTags}
+<div class="tags">
+{block:Tags}<a href="{TagURL}">#&nbsp;{Tag}</a>{/block:Tags}</div>
+{/block:HasTags}
+<div class="note">
+{block:PostNotes}{PostNotes}{/block:PostNotes}
+</div>
+</div>
+
+
+{/block:Posts}
+ </div>
+ 
+<div style="position:fixed;bottom:-5px;right:0;z-index:9999;"><img src="{image:side img}"></div>
+
+ 
+<div id="credit">
+<a href="https://gawwo.tumblr.com"><img src="https://66.media.tumblr.com/33a4fd4193dc2dc70dbae8fb78b4a4c6/cc87bfbbd5b1c1d9-16/s75x75_c1/c26edb3f96649d426d2299292bea3c044b7ec421.png" width="70px"></a>
+    
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!------
+    this is my theme  for my blog where you can see all my themes. feel free to use this as you want but i just needed a non-default theme because that was terribly ironic.
+    you can use it just dont remove the credit please! either have the credit in a link or a gif/image. to make the image stop moving, scroll all the way to the bottom and ONLY remove the bits that say "<marquee behavior="alternate" scrollamount="5">" & "</marquee>".
+<!------>
+
+<head>
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{FavIcon}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- [[TEXT] there are only four links. the defaults are home, ask, archive, & navigation. they can be changed as the user wants.  -->
+     <meta name="text:link 1" content="refresh"/>
+     <meta name="text:link 1 url" content="/"/>
+     
+     <meta name="text:link 2" content="ask"/>
+     <meta name="text:link 2 url" content="/ask"/>
+     
+     <meta name="text:link 3" content="archive"/>
+     <meta name="text:link 3 url" content="/archive"/>
+     
+     <meta name="text:link 4" content="navigation"/>
+     <meta name="text:link 4 url" content="/"/>
+     
+  <!-- [COLORS] the theme is best when monochromatic. you can edit: background, title, sidebar link/hover/underline, post title/link/hover. -->
+     <meta name="color:background" content="#f0ebf1" />
+     <meta name="color:scroll" content="#98409d"/>
+     
+     <meta name="color:title" content="#9c7299"/>
+     <meta name="color:description" content="#bc91b9"/>
+     <meta name="color:sidebar link" content="#920499"/>
+     <meta name="color:sidebar link hover" content="#cc39c7"/>
+     <meta name="color:sidebar link border" content="#ca39cc"/>
+     
+     <meta name="color:post title" content="#92247a"/>
+     <meta name="color:post text" content="#984781"/>
+     <meta name="color:post link" content="#c800b4"/>
+     <meta name="color:post link hover" content="#ff72f1"/>
+     
+  <!-- [IMAGES] there are image options. you can have a repeating/full background image,  a 80x80 circular sidebar image, and a 250x250 floating image. -->
+      <meta name="image:background" content=""/>
+      <meta name="image:sidebar" content="https://64.media.tumblr.com/3f22d6cbbebd91d7ea13ad7cfcb0abb5/91528f0629f69d92-04/s2048x3072/6b0305e329af245c006ed7ad166656461f73c5e4.png"/>
+      <meta name="image:float" content="https://64.media.tumblr.com/e1e2d35d645991db9ff8df54f1ad2b3e/91528f0629f69d92-80/s2048x3072/a907dd6012aed5a9db8138681324b3c4bbdafc1c.png"/>
+ 
+  <!-- [OPTIONS] there are several options. you have post width options: 300, 400, or 500. you have title size options: 15, 18, or 20. you have text size options: 11, 12, or 14. you can choose between a credit link or gif.-->
+      <meta name="if:creditlink" content="0"/>
+      <meta name="if:creditgif" content="0"/>
+
+      <meta name="if:bgrepeat" content="0"/>
+      <meta name="if:bgfull" content="1"/>
+         
+      <meta name="select:post size" title="300px" content="300"/>
+      <meta name="select:post size" title="400px" content="400"/>
+      <meta name="select:post size" title="500px" content="500"/>
+      
+      <meta name="select:title size" title="15px" content="15"/>
+      <meta name="select:title size" title="18px" content="18"/>
+      <meta name="select:title size" title="20px" content="20"/>
+      
+      <meta name="select:text size" title="11pt" content="11"/>
+      <meta name="select:text size" title="12pt" content="12"/>
+      <meta name="select:text size" title="14pt" content="14"/>
+
+<style type="text/css">
+
+                /* follow/dashboard buttons */
+iframe#tumblr_controls
+    {
+        right:2px !important; 
+        position: fixed !important;
+        -webkit-transition: opacity 0.7s linear;
+        opacity: 0.16;
+        -webkit-transition: all 0.8s ease-out;
+        -moz-transition: all 0.8s ease-out;
+        transition: all 0.8s ease-out;
+        -webkit-filter: invert(100%);
+    }
+iframe#tumblr_controls:hover
+    {
+        -webkit-transition: opacity 0.7s linear;
+        opacity: 0.16;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        -webkit-filter: invert(100%);
+    }
+
+
+                /* basic styles */
+body
+    {
+        color: {color:post text};
+        background-color: {color:background};
+              /* bg options */
+            {block:ifbgrepeat}
+                background-image: url({image:background});
+                background-repeat:repeat;
+                background-attachment:fixed;
+                background-position:left top;
+            {/block:ifbgrepeat}
+            {block:ifbgfull}
+                background-image: url({image:background});
+                background-size: cover;
+            {/block:ifbgfull}
+        font-size: {select:text size}px;
+        font-family: courier new;
+        line-height: 16px;
+    }
+    
+  /* header (titles) */
+h1
+    {
+        font-size: 12px;
+        font-family: courier new;
+        color: {color:title};
+    }
+    
+  /* links, link hover */
+a
+    {
+        text-decoration: none;
+        color: {color:post link};
+    }
+a:hover
+    {
+        color:{color:post link hover};
+        cursor: help;
+    }
+blockquote
+    {
+        border-left: 2px solid {color:post title};
+        margin-left: 6px;
+        padding-left: 10px;
+    }
+iframe, img, embed, object, video
+    {
+       max-width: 100%;
+    }
+img
+    {
+       height: auto;
+       width: auto;
+    }
+    
+  /* permalink page */
+img.avatar
+    {
+        display:none;
+    }
+ol.notes
+    {
+        margin-top: 40px;
+    }
+    
+                /* scrollbar */
+::-webkit-scrollbar
+    {
+        width: 3px;
+        height: 5px;
+        background: {color:scroll};
+    }
+::-webkit-scrollbar-thumb
+    {
+        background: {color:background};
+        border-radius: 16px;
+        border-top: 5px solid {color:scroll};
+    }
+    
+    
+                /* post stuff */
+  /* post box */
+#content
+    { 
+        {block:IndexPage}
+            width:{select:post size}px;
+        {/block:IndexPage}
+        {block:PermalinkPage}
+            width:{select:post size}px;
+        {/block:PermalinkPage}
+        position: relative;
+        margin-left: 400px;
+        margin-top: 60px;
+    }
+
+  /* floating image */
+#floater img
+    {
+        margin-bottom:0px;
+        margin-left:20px;
+        max-height:250px;
+        max-width:250px;
+        height:auto;
+    } 
+    
+  /* for individual posts */ 
+.entry
+    {
+        margin-bottom: 60px;
+        padding: 20px;
+    }
+
+  /* permalinks */
+#perma
+    {
+        position: absolute;
+        margin-left:600px;
+        letter-spacing: .5px;
+        width: 200px;
+        text-transform: lowercase;
+    }
+    
+  /* sidebar */
+#sidebar
+    {
+        top: 100px;
+        left: 26px;
+        position: fixed;
+        width: 180px;
+    }
+#sidebar img
+    {
+       float:center;
+       margin-left:30px;
+       -MOZ-BORDER-RADIUS: 100%;
+       -WEBKIT-BORDER-RADIUS: 100%;
+       BORDER-RADIUS: 100%;
+       height:80px;
+       width:80px;
+       margin-top: 250px;
+       position: fixed;
+    }
+#sidebar a
+    {
+        border-bottom: 2px solid {color:sidebar link border};
+        color: {color:sidebar link};
+        margin-top: 20px;
+    }
+#sidebar a:hover 
+    {
+        border-bottom: 2px solid transparent;
+        color: {color:sidebar link hover};
+    }  
+.head
+    {
+        font-size: {select:title size}px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        color: {color:title};
+        letter-spacing: .5px;
+    }
+
+#description 
+    {
+        margin-top:10px;    
+        margin-left:50px;
+        margin-bottom:5px;
+        width: 250px;
+        text-align:center;
+        padding: 5px;
+    }
+.desc
+    {
+        width: 250px;
+        height: 150px;
+        color:{color:description};
+        font-size:13px;
+        font-family:{font:description};
+        overflow:auto;
+    }
+.desc::-webkit-scrollbar
+    {
+        width:10px;
+    }
+.desc::-webkit-scrollbar-track
+    {
+        background-color:{color:scroll};
+        border-radius:10px;
+    }
+.desc::-webkit-scrollbar-thumb
+    {
+        background-color:{color:background};
+        border-radius:10px;
+    }
+
+</style>
+
+<!---infinite scroll--->
+<script type="text/javascript" src="https://static.tumblr.com/q0etgkr/EIBmz7s0p/infinitescrolling.js"></script>
+
+</head>
+
+<body>
+
+
+  <!-- [SIDEBAR CUSTOMIZAITON] -->
+  
+  
+<div id="sidebar">
+    <div class="head">
+        {Title}
+    </div>
+    <div class="desc">
+        {block:Description}
+            {Description}
+        {/block:Description}
+    </div>
+    <br>
+            <a href="{text:Link 1 url}">{text:Link 1}</a>
+            <a href="{text:Link 2 url}">{text:Link 2}</a>
+            <a href="{text:Link 3 url}">{text:Link 3}</a>
+            <a href="{text:Link 4 url}">{text:Link 4}</a>
+            {block:ifCreditLink}
+                <a href="https://gawwo.tumblr.com/">
+                theme<br><br></a>
+            {/block:ifCreditLink}
+     <div id="sidebar"><img src="{image:sidebar}"> </div>
+</div>
+
+
+  <!-- [POST CUSTOMIZAITON] -->
+<div id="content">
+
+
+    {block:Posts}
+            {block:NoRebloggedFrom}
+                {block:RebloggedFrom}
+                    {ReblogParentName}
+                {/block:RebloggedFrom}
+            {/block:NoRebloggedFrom}
+        
+        <div class="entry">
+        
+        
+            <!--permalinks-->
+            {block:IndexPage}
+                <div id="perma">
+                    <a href="{Permalink}">
+                         {Year} / {MonthNumberwithZero} / {DayofMonthwithZero}
+                    </a>
+                        <br>
+                    <a href="{Permalink}">
+                        engaged {NoteCount} time(s)
+                    </a>
+                        <br>
+                    <a href="{ReblogURL}"> reblog </a>
+                </div>
+            {/block:IndexPage}
+        
+            <!--text posts-->
+        {block:Text}
+            {block:Title}
+                <h1>{Title}</h1>
+            {/block:Title}{Body}
+        {/block:Text}
+    
+            <!--single photo posts-->
+        {block:Photo}
+            <a href="{permalink}"> <img class="photo" src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="100%"/> </a>
+            {block:IndexPage}
+                    {Photo-400}
+                {block:Caption}
+                    {Caption}
+                {/block:Caption}
+            {/block:IndexPage}
+            
+            {block:PermalinkPage}
+                    {Photo-400}
+                {block:Caption}
+                    {Caption}
+                {/block:Caption}
+            {/block:PermalinkPage}
+        {/block:Photo}
+    
+            <!--photoset posts-->    
+        {block:Photoset}
+            {block:IndexPage}
+                    {Photoset-400}
+                {block:Caption}
+                    {Caption}
+                {/block:Caption}
+            {/block:IndexPage}
+            
+            {block:PermalinkPage}
+                    {Photoset-400}
+                {block:Caption}
+                    {Caption}
+                {/block:Caption}
+            {/block:PermalinkPage}
+        {/block:Photoset}
+        
+            <!--link posts-->
+        {block:Link}
+            <h1>
+                <a href="{URL}">{Name}</a>
+            </h1>
+            {block:Description}
+                {Description}
+            {/block:Description}
+        {/block:Link}
+        
+            <!--quote posts-->
+        {block:Quote}
+            "{Quote}"
+                {block:Source}
+                    <br>- {Source}
+                {/block:Source}
+        {/block:Quote}
+        
+              <!--chat posts--> 
+        {block:Chat}
+            {block:Title}
+                <h1>{Title}</h1>
+            {/block:Title}
+            {block:Lines}
+                {block:Label}
+                    <b>{Label}</b>
+                {/block:Label}
+                <span> <i>{Line}</i> <br> </span>
+            {/block:Lines}
+        {/block:Chat}
+    
+            <!--audio posts-->
+        {block:Audio}
+            {AudioPlayerWhite}
+                {block:IndexPage}
+                    <p>{block:TrackName}
+                            Track: {TrackName}<br>
+                        {/block:TrackName}
+                        {block:Artist}
+                            Artist: {Artist}<br>
+                        {/block:Artist}
+                        {block:Album}
+                            Album: {Album}<br>
+                        {/block:Album}
+                        {block:PlayCount}
+                            Played: {PlayCount}
+                        {/block:PlayCount}
+                    {/block:IndexPage}
+                {block:PermalinkPage}
+                    {block:Caption}
+                        {Caption}
+                    {/block:Caption}
+                {/block:PermalinkPage}
+            {/block:Audio}
+            
+            <!--video posts-->
+        {block:Video}
+            {block:IndexPage}
+                    {Video-400}
+                {block:Caption}
+                    {Caption}
+                {/block:Caption}
+            {/block:IndexPage}
+            
+            {block:PermalinkPage}
+                    {Video-400}
+                {block:Caption}
+                    {Caption}
+                {/block:Caption}
+            {/block:PermalinkPage}
+        {block:Video}
+        
+            <!--questions-->    
+        {block:Answer}
+            <b>{Asker}</b> asked: <br>
+            <center> <i>{Question}</i> </center>
+            <p>{Answer}
+        {/block:Answer}
+    
+    
+    <!--permalink bit: contains note count, option to reblog, & date-->
+        {block:PermalinkPage}
+            <center>
+            {block:HasTags}
+                {block:Tags}
+                    <a href="{TagURL}">#{Tag} </a>
+                {/block:Tags}
+            {/block:HasTags}
+            <p>{NoteCountwithLabel}
+            </center>
+            {block:PostNotes}
+                {PostNotes}
+            {/block:PostNotes}
+        {/block:PermalinkPage}
+            
+                
+            </div> <!---this is for the "entry" category--->
+    {/block:Posts}
+
+
+{block:ContentSource}
+    {SourceURL}
+        {block:SourceLogo}
+            <img src="{BlackLogoURL}"
+                width="{LogoWidth}"
+                height="{LogoHeight}"
+                alt="{SourceTitle}" />
+            {/block:SourceLogo}
+        {block:NoSourceLogo}
+            {SourceLink}
+        {/block:NoSourceLogo}
+{/block:ContentSource}
+
+
+</div><!---this is for the "content" category--->
+
+<div id="floater">
+    <div style="position:fixed;bottom:-5px;right:0;z-index:9999">
+        <img src="{image:float}"/></a>
+    </div>
+</div>
+
+{block:ifcreditgif}
+    <div style="bottom:-5px;left:0;z-index:9999">
+            <a href="https://gawwo.tumblr.com">
+            <marquee behavior="alternate" scrollamount="5">
+            <img src="https://64.media.tumblr.com/4c96f957e5fa376d6fe1c50c96265723/3bae8b672077978b-84/s75x75_c1/e6bed025e492a552bf168979e6999690b61605d6.png" width="50px">
+            </marquee>
+            </a>
+    </div>
+{/block:ifcreditgif}
+
+</body>
+</html>
